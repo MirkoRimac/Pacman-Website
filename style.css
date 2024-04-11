@@ -1,0 +1,92 @@
+@font-face {
+    font-family: retroFont;
+    src: url("./fonts/8bitOperatorPlusSC-Bold.ttf");
+}
+
+body {
+    background: url("./img/pacman.png");
+    color: #fff;
+    overflow-y: hidden;
+}
+
+.window {
+    font-family: retroFont;
+    background-color: #392c8a;
+    border: 8px solid #fff;
+    width: 80%;
+    max-width: 80%;
+    text-align: center;
+}
+
+.window3 {
+    font-family: retroFont;
+    background-color: #fff;
+    border: 8px solid #000;
+    width: 80%;
+    max-width: 80%;
+    text-align: center;
+}
+
+.window5 {
+    font-family: retroFont;
+    background-color: #fff;
+    border: 8px solid #000;
+    width: 80%;
+    max-width: 80%;
+    text-align: center;
+}
+
+.header {
+    color: #f6ff52;
+    margin-bottom: 50px;
+}
+
+.window ul li {
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+
+/* Arrows left and right on active li element */
+
+.menu li.active a {
+    position: relative;
+}
+
+.menu li.active a::before {
+    content: '';
+    background-image: url("./img/arrow-right.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: -50px;
+    width: 40px; /* Adjust the width of the space the image occupies */
+    height: 70px; /* Adjust the height of the space the image occupies */
+}
+
+.menu li.active a::after {
+    content: '';
+    background-image: url("./img/arrow-left.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: -50px;
+    width: 40px; /* Adjust the width of the space the image occupies */
+    height: 70px; /* Adjust the height of the space the image occupies */
+}
+
+/* Arrow Up - Scroll to Top*/
+
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+
+.scroll-top img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
